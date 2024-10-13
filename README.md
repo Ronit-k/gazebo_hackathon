@@ -12,7 +12,15 @@ Clone this repo on to your system:
 go to the workspace ***Robotic_Arm***   
 ``` cd gazebo_hackathon/Robotic_Arm ```
 
+<br>
+Add the required git repositories to your catkin workspace:
+
+``` cd src/ ```   
+``` git clone https://github.com/JenniferBuehler/general-message-pkgs.git ```   
+``` git clone https://github.com/JenniferBuehler/gazebo-pkgs.git ```    
+
 build the workspace   
+``` cd .. ```   
 ``` catkin build ``` 
 > *if any warnings appear, try to build again
 
