@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="robot_arm_urdf">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="arm">
+        <joint name="waist_to_base"/>
+        <joint name="arm01_to_waist"/>
+        <joint name="arm02_to_arm01"/>
+        <joint name="arm03_to_arm02"/>
+        <joint name="gripperbase_arm03"/>
+    </group>
+    <group name="gripper">
+        <joint name="Mgripper_to_gripperbase"/>
+        <joint name="gripper_to_gripperbase"/>
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="open" group="gripper">
+        <joint name="Mgripper_to_gripperbase" value="0.5235"/>
+        <joint name="gripper_to_gripperbase" value="-0.4674"/>
+    </group_state>
+    <group_state name="close" group="gripper">
+        <joint name="Mgripper_to_gripperbase" value="0.8342674"/>
+        <joint name="gripper_to_gripperbase" value="-0.925025"/>
+    </group_state>
+    <group_state name="half_open" group="gripper">
+        <joint name="Mgripper_to_gripperbase" value="0.767945"/>
+        <joint name="gripper_to_gripperbase" value="-0.855211"/>
+    </group_state>
+    <group_state name="straight_up" group="arm">
+        <joint name="waist_to_base" value="0"/>
+        <joint name="arm01_to_waist" value="0"/>
+        <joint name="arm02_to_arm01" value="0"/>
+        <joint name="arm03_to_arm02" value="0"/>
+        <joint name="gripperbase_arm03" value="0"/>
+    </group_state>
+    <group_state name="pickup" group="arm">
+        <joint name="waist_to_base" value="-2.63545"/>
+        <joint name="arm01_to_waist" value="-1.55334"/>
+        <joint name="arm02_to_arm01" value="0.261799"/>
+        <joint name="arm03_to_arm02" value="0"/>
+        <joint name="gripperbase_arm03" value="-0.139626"/>
+    </group_state>
+    <group_state name="place" group="arm">
+        <joint name="waist_to_base" value="-0.15708"/>
+        <joint name="arm01_to_waist" value="-0.680678"/>
+        <joint name="arm02_to_arm01" value="0"/>
+        <joint name="arm03_to_arm02" value="0"/>
+        <joint name="gripperbase_arm03" value="1.0472"/>
+    </group_state>
+    <group_state name="gripper_down" group="arm">
+        <joint name="waist_to_base" value="-0.15708"/>
+        <joint name="arm01_to_waist" value="-0.680678"/>
+        <joint name="arm02_to_arm01" value="0"/>
+        <joint name="arm03_to_arm02" value="0"/>
+        <joint name="gripperbase_arm03" value="-0.139626"/>
+    </group_state>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="hand_ee" parent_link="servo_motor_micro_9g" group="gripper"/>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="arm_01" link2="arm_02" reason="Adjacent"/>
+    <disable_collisions link1="arm_01" link2="arm_03" reason="Never"/>
+    <disable_collisions link1="arm_01" link2="base" reason="Never"/>
+    <disable_collisions link1="arm_01" link2="gripper" reason="Never"/>
+    <disable_collisions link1="arm_01" link2="part_1_gear_2" reason="Never"/>
+    <disable_collisions link1="arm_01" link2="servo_motor_micro_9g" reason="Never"/>
+    <disable_collisions link1="arm_01" link2="waist" reason="Adjacent"/>
+    <disable_collisions link1="arm_02" link2="arm_03" reason="Adjacent"/>
+    <disable_collisions link1="arm_02" link2="base" reason="Never"/>
+    <disable_collisions link1="arm_02" link2="gripper" reason="Never"/>
+    <disable_collisions link1="arm_02" link2="part_1_gear_2" reason="Never"/>
+    <disable_collisions link1="arm_02" link2="servo_motor_micro_9g" reason="Never"/>
+    <disable_collisions link1="arm_02" link2="waist" reason="Never"/>
+    <disable_collisions link1="arm_03" link2="gripper" reason="Never"/>
+    <disable_collisions link1="arm_03" link2="part_1_gear_2" reason="Never"/>
+    <disable_collisions link1="arm_03" link2="servo_motor_micro_9g" reason="Adjacent"/>
+    <disable_collisions link1="arm_03" link2="waist" reason="Never"/>
+    <disable_collisions link1="base" link2="waist" reason="Adjacent"/>
+    <disable_collisions link1="gripper" link2="servo_motor_micro_9g" reason="Adjacent"/>
+    <disable_collisions link1="part_1_gear_2" link2="servo_motor_micro_9g" reason="Adjacent"/>
+    <disable_collisions link1="part_1_gear_2" link2="waist" reason="Never"/>
+    <disable_collisions link1="servo_motor_micro_9g" link2="waist" reason="Never"/>
+</robot>

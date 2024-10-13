@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="robot_arm_simulation">
+    
+    <!-- Physics Configuration -->
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Include the ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Include a simple sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Object to be Picked -->
+    <model name="pick_object">
+      <pose>0 1 0.5 0 0 0</pose> <!-- Position (x, y, z) and orientation (roll, pitch, yaw) -->
+      <static>false</static> <!-- Dynamic object that can be picked -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.02 0.02 0.02</size> <!-- Size of the box (x, y, z) -->
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.0</mu>
+                <mu2>1.0</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.02 0.02 0.02</size> <!-- Same size as the collision -->
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient> <!-- Red color -->
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.1</mass> <!-- Mass of the object -->
+        </inertial>
+      </link>
+    </model>
+
+    <!-- Target Location Marker (Static) -->
+    <model name="target_location">
+      <pose>0.25 0.15 0.5 0 0 0</pose> <!-- Target position where the object should be placed -->
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.03</radius> <!-- Adjusted radius for better visibility -->
+              <length>0.02</length> <!-- Length of the target marker -->
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.03</radius> <!-- Adjusted radius for better visibility -->
+              <length>0.005</length>
+            </cylinder>
+            <material>
+              <ambient>1 0 0 1</ambient> <!-- Red color for the target -->
+              <diffuse>1 0 0 1</diffuse>
+            </material>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

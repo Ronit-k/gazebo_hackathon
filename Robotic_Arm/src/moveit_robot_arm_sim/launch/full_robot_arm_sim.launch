@@ -1,0 +1,10 @@
+<launch>
+
+  <include file = "$(find robot_arm_urdf)/launch/gazebo_demo_world.launch" />
+  <include file = "$(find moveit_robot_arm_sim)/launch/move_group.launch" />
+  <arg name="use_rviz" default="true" />
+  <include file="$(find moveit_robot_arm_sim)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+  <arg name="rviz_config" value="$(find moveit_robot_arm_sim)/launch/moveit.rviz"/>
+  </include>
+
+</launch>

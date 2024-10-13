@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="robot_arm_urdf">
+
+<link name="world"/>
+
+    <joint name="base_joint" type="fixed">
+      <parent link="world"/>
+      <child link="base"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+    </joint>
+    
+<link name="base">
+<visual>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/base.stl"/>
+</geometry>
+<material name="base_material">
+<color rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="1.308444967371601772e-08 0.0016455242753219850339 0.033159151665155039979" rpy="0 0 0"/>
+<mass value="2.5061742673613189858" />
+<inertia ixx="0.0080373596136458155814" ixy="-2.0064512625389730521e-09"  ixz="4.1854899316196284146e-10" iyy="0.0076814415385288775315" iyz="0.00022409696897891879445" izz="0.012258412810707976226" />
+</inertial>
+</link>
+
+<link name="waist">
+<visual>
+<origin xyz="0 0 0" rpy="-1.570796326794896558 -1.849012482255595403e-31 1.9081724580384325648e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/waist.stl"/>
+</geometry>
+<material name="waist_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="-1.570796326794896558 -1.849012482255595403e-31 1.9081724580384325648e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/waist.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.011241803612718400188 -0.0021442173478276350951 -0.029074280411245594091" rpy="0 0 0"/>
+<mass value="1.9512011284109493925" />
+<inertia ixx="0.0040507170267320893181" ixy="1.5176413056554270416e-05"  ixz="0.0003832822978937276779" iyy="0.0029973116973948817597" iyz="-0.00040117249721222510107" izz="0.003584616248913396943" />
+</inertial>
+</link>
+
+<link name="arm_01">
+<visual>
+<origin xyz="3.4694469519536141888e-18 -0.17999999999999999334 -0.031500000000000000222" rpy="-2.924169689086383973e-29 -5.6950657598437192986e-17 -1.9370537946433333546e-28" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/arm_01.stl"/>
+</geometry>
+<material name="arm_01_material">
+<color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="3.4694469519536141888e-18 -0.17999999999999999334 -0.031500000000000000222" rpy="-2.924169689086383973e-29 -5.6950657598437192986e-17 -1.9370537946433333546e-28" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/arm_01.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="9.438877884618801971e-08 -0.090000259389720727032 -0.011657399098793312653" rpy="0 0 0"/>
+<mass value="1.6973256563675322983" />
+<inertia ixx="0.0061854543167089758374" ixy="1.8425104712181581008e-08"  ixz="1.5345783666730037511e-09" iyy="0.00055016188789161740019" iyz="-5.638428034084887578e-09" izz="0.0064757856499462933611" />
+</inertial>
+</link>
+
+<link name="arm_02">
+<visual>
+<origin xyz="0.052125000000000032419 -3.4694469519536141888e-18 0" rpy="-3.141592653589793116 5.7908188067313584725e-29 6.6745401632892220506e-28" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/arm_02.stl"/>
+</geometry>
+<material name="arm_02_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.052125000000000032419 -3.4694469519536141888e-18 0" rpy="-3.141592653589793116 5.7908188067313584725e-29 6.6745401632892220506e-28" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/arm_02.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0625681145948023959 4.7391340990904147099e-05 -0.0085798873056161916589" rpy="0 0 0"/>
+<mass value="1.2477870269405204606" />
+<inertia ixx="0.0005199601525508458456" ixy="-4.1359978407192805571e-06"  ixz="-2.4034660981138106451e-05" iyy="0.0030639997078488077561" iyz="-1.4401142663008283034e-08" izz="0.0032585331859561351281" />
+</inertial>
+</link>
+
+<link name="arm_03">
+<visual>
+<origin xyz="0.0074999999999999979877 1.7347234759768070944e-18 -5.5511151231257827021e-17" rpy="-1.570796326794896558 1.6878593017627638581e-29 2.0650159235514834331e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/arm_03.stl"/>
+</geometry>
+<material name="arm_03_material">
+<color rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0074999999999999979877 1.7347234759768070944e-18 -5.5511151231257827021e-17" rpy="-1.570796326794896558 1.6878593017627638581e-29 2.0650159235514834331e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/arm_03.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0075688905330903158072 -0.0079064620494430429276 -0.026711947480030959201" rpy="0 0 0"/>
+<mass value="0.43636053014323650245" />
+<inertia ixx="0.0002324727636841850153" ixy="-2.375483843556414412e-07"  ixz="-6.8963621581327043345e-07" iyy="0.00029851895897625848686" iyz="-3.4405034042908628881e-05" izz="0.00015552264633482166135" />
+</inertial>
+</link>
+
+<link name="servo_motor_micro_9g">
+<visual>
+<origin xyz="0.013500000000000008521 0.060749999999999859668 0.0240000000000000005" rpy="-1.570796326794896558 -1.570796326794896336 0" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/servo_motor_micro_9g.stl"/>
+</geometry>
+<material name="servo_motor_micro_9g_material">
+<color rgba="0.76862745098039220171 0.88627450980392152857 0.95294117647058818044 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.013500000000000008521 0.060749999999999859668 0.0240000000000000005" rpy="-1.570796326794896558 -1.570796326794896336 0" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/servo_motor_micro_9g.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0053043898012558668431 0.043945681315923593169 0.015548629769065023046" rpy="0 0 0"/>
+<mass value="0.64029048072131267144" />
+<inertia ixx="0.00073218478054918603119" ixy="-4.3855423552015562695e-05"  ixz="2.9500735923160239431e-05" iyy="0.00038228691425246059477" iyz="-0.00018359042225535402316" izz="0.0005448963287970038467" />
+</inertial>
+</link>
+
+<link name="gripper">
+<visual>
+<origin xyz="0 0 -0.0029999999999999957256" rpy="3.141592653589793116 1.1473917933947295061e-16 4.9962090555280968027e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/gripper.stl"/>
+</geometry>
+<material name="gripper_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+<friction>0.9</friction>   <!-- High friction for gripper fingers -->
+<restitution>0.0</restitution>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 -0.0029999999999999957256" rpy="3.141592653589793116 1.1473917933947295061e-16 4.9962090555280968027e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/gripper.stl"/>
+</geometry>
+    <surface>
+      <contact>
+        <ode>
+          <kp>100000</kp>
+          <kd>10</kd>
+          <mu>0.9</mu>
+          <mu2>0.9</mu2>
+        </ode>
+      </contact>
+    </surface>
+</collision>
+<inertial>
+<origin xyz="0.039797446633225243284 -0.0071797102337791468205 -0.0026655973034328192539" rpy="0 0 0"/>
+<mass value="0.096807587187121388328" />
+<inertia ixx="1.0436801210348834121e-05" ixy="2.856909230840686998e-05"  ixz="-1.1289910687973159345e-07" iyy="0.0001493128022397500229" iyz="2.0361418961475602225e-08" izz="0.00015921520268781551907" />
+</inertial>
+</link>
+
+<joint name="gripper_to_gripperbase" type="revolute">
+<origin xyz="0.020999999999999994366 0.056999999999999828582 -0.013500000000000008521" rpy="-1.5707963267948923392 1.0471975511965976313 1.5707963267948958919" />
+<parent link="servo_motor_micro_9g" />
+<child link="gripper" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="-1.431169986635350222" upper="0.52359877559829881566"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="part_1_gear_2">
+<visual>
+<origin xyz="-5.5511151231257827021e-17 5.5511151231257827021e-17 -0.0029999999999999887867" rpy="2.8349777283637721441e-18 -8.1601235398565251445e-17 8.9454483410563380923e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/part_1_gear_2.stl"/>
+</geometry>
+<material name="part_1_gear_2_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+<friction>0.9</friction>   <!-- High friction for gripper fingers -->
+<restitution>0.0</restitution>
+</material>
+</visual>
+<collision>
+<origin xyz="-5.5511151231257827021e-17 5.5511151231257827021e-17 -0.0029999999999999887867" rpy="2.8349777283637721441e-18 -8.1601235398565251445e-17 8.9454483410563380923e-17" />
+<geometry>
+<mesh filename="package://robot_arm_urdf/meshes/part_1_gear_2.stl"/>
+</geometry>
+    <surface>
+      <contact>
+        <ode>
+          <kp>100000</kp>
+          <kd>10</kd>
+          <mu>0.9</mu>
+          <mu2>0.9</mu2>
+        </ode>
+      </contact>
+    </surface>
+</collision>
+<inertial>
+<origin xyz="0.040345905725660081986 0.0072955290988062550944 -0.0027349576605557833486" rpy="0 0 0"/>
+<mass value="0.09527073563863490413" />
+<inertia ixx="1.0348700818063351201e-05" ixy="-2.8099340519462046912e-05"  ixz="1.1062288635049842927e-07" iyy="0.00014645863345789353381" iyz="1.9975690995284392656e-08" izz="0.00015628040630857664229" />
+</inertial>
+</link>
+
+<joint name="Mgripper_to_gripperbase" type="revolute">
+<origin xyz="0.019325037223340026799 0.056999999999999828582 0.026849999999999998868" rpy="-1.5707963267948952257 -1.0471975511965978534 1.5707963267948676922" />
+<parent link="servo_motor_micro_9g" />
+<child link="part_1_gear_2" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="0.52359877559829881566" upper="1.431169986635350222"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="gripperbase_arm03" type="revolute">
+<origin xyz="0.0075000000000000014572 -0.021000000000000001305 -0.041999999999999981792" rpy="-1.570796326794896558 -2.4166072180898011715e-12 8.5000798273800594133e-17" />
+<parent link="arm_03" />
+<child link="servo_motor_micro_9g" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm03_to_arm02" type="revolute">
+<origin xyz="0.13462499999999999467 -0.0079500000000000022038 -0.0082500000000000003886" rpy="-1.57079632679489678 1.7211217671221983677e-16 1.570796326794896336" />
+<parent link="arm_02" />
+<child link="arm_03" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="-6.283185307179586232" upper="6.283185307179586232"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm02_to_arm01" type="revolute">
+<origin xyz="3.4694469519536141888e-18 -0.17999999999999999334 8.6736173798840354721e-19" rpy="3.141592653589793116 -5.5820702367740645181e-16 -1.5707963267901117188" />
+<parent link="arm_01" />
+<child link="arm_02" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="-1.9198621771937625091" upper="1.9198621771937625091"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm01_to_waist" type="revolute">
+<origin xyz="0.0060000000000000018596 -0.020864999999999998131 -0.060420000000000001483" rpy="1.5707963267948974462 2.3727674168054265368e-12 1.570796326794896558" />
+<parent link="waist" />
+<child link="arm_01" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="waist_to_base" type="revolute">
+<origin xyz="0 0 0.084000000000000005218" rpy="3.1415926535897917837 4.9954643694121674038e-16 -2.6318082040242551933" />
+<parent link="base" />
+<child link="waist" />
+<axis xyz="0 0 1"/>
+<limit effort="20" velocity="20" lower="-6.283185307179586232" upper="6.283185307179586232"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<transmission name="waist">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="waist_to_base">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="waist_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="arm01">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="arm01_to_waist">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="arm01_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="arm02">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="arm02_to_arm01">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="arm02_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="arm03">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="arm03_to_arm02">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="arm03_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="gripperbase">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripperbase_arm03">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="gripperbase_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="Mgripper)">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Mgripper_to_gripperbase">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Mgripper_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+<!-- this joint should just mirror motor gripper joint !! -->
+
+  <transmission name="gripper)">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_to_gripperbase">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="gripper_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo>
+    <plugin name="control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="waist">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="arm_01">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="arm_02">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="arm_03">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="servo_motor_micro_9g">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+<!-- in these the teeths collide so maybe idk remove this??-->
+
+  <gazebo reference="gripper">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="part_1_gear_2">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  
+  
+  <gazebo>
+	  <plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+	    <arm>
+	      <arm_name>arm</arm_name>
+	      <palm_link>servo_motor_micro_9g</palm_link>
+	      <gripper_link>gripper</gripper_link>
+	      <gripper_link>part_1_gear_2</gripper_link>
+	    </arm>
+	    <forces_angle_tolerance>100</forces_angle_tolerance>
+	    <update_rate>4</update_rate>
+	    <grip_count_threshold>4</grip_count_threshold>
+	    <max_grip_count>8</max_grip_count>
+	    <release_tolerance>0.005</release_tolerance>
+	    <disable_collisions_on_attach>false</disable_collisions_on_attach>
+	    <contact_topic>__default_topic__</contact_topic>
+	  </plugin>
+  </gazebo>
+
+</robot>

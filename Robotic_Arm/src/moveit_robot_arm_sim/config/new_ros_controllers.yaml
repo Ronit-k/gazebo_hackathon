@@ -1,0 +1,17 @@
+controller_list:
+  - name: robot_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+    - waist_to_base
+    - arm01_to_waist
+    - arm02_to_arm01
+    - arm03_to_arm02
+    - gripperbase_arm03
+  - name: hand_ee_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+    - Mgripper_to_gripperbase
+    - gripper_to_gripperbase
