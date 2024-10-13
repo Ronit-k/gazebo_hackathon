@@ -10,7 +10,7 @@ Clone this repo on to your system:
 ``` git clone https://github.com/Ronit-k/gazebo_hackathon.git```
 
 go to the workspace ***Robotic_Arm***   
-``` cd Robotic_Arm ```
+``` cd gazebo_hackathon/Robotic_Arm ```
 
 build the workspace   
 ``` catkin build ``` 
