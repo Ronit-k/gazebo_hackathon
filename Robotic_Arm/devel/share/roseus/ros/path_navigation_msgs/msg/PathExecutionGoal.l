@@ -1,1 +1,0 @@
-/home/ronit/Workspaces/Robotic_Arm/devel/.private/path_navigation_msgs/share/roseus/ros/path_navigation_msgs/msg/PathExecutionGoal.l

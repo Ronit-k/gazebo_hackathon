@@ -1,1 +1,0 @@
-/home/ronit/Workspaces/Robotic_Arm/devel/.private/gazebo_test_tools/lib/python3/dist-packages/gazebo_test_tools/srv/__init__.py

@@ -1,1 +1,0 @@
-/home/ronit/Workspaces/Robotic_Arm/devel/.private/gazebo_state_plugins/lib/pkgconfig/gazebo_state_plugins.pc
