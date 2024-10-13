@@ -1,3 +1,0 @@
-/home/ronit/Workspaces/robotic_armV2/devel/./cmake.lock 85
-/home/ronit/Workspaces/robotic_armV3/devel/./cmake.lock 77
-/home/ronit/Workspaces/Robotic_Arm/devel/./cmake.lock 22
