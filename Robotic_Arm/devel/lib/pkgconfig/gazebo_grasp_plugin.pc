@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/gazebo_grasp_plugin/lib/pkgconfig/gazebo_grasp_plugin.pc

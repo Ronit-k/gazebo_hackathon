@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/object_msgs/share/roseus/ros/object_msgs/msg/Object.l

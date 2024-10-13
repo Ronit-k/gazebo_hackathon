@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/object_msgs/share/gennodejs/ros/object_msgs/msg/Object.js

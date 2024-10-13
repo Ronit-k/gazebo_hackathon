@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ronit/Workspaces/Robotic_Arm/devel/.private/moveit_robot_arm_sim/setup.sh

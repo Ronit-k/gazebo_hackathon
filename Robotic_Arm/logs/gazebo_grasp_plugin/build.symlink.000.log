@@ -1,0 +1,5 @@
+Symlinking /home/ronit/Workspaces/Robotic_Arm/devel/share/gazebo_grasp_plugin/cmake/gazebo_grasp_pluginConfig.cmake
+Symlinking /home/ronit/Workspaces/Robotic_Arm/devel/share/gazebo_grasp_plugin/cmake/gazebo_grasp_pluginConfig-version.cmake
+Symlinking /home/ronit/Workspaces/Robotic_Arm/devel/lib/libgazebo_grasp_msgs.so
+Symlinking /home/ronit/Workspaces/Robotic_Arm/devel/lib/libgazebo_grasp_fix.so
+Symlinking /home/ronit/Workspaces/Robotic_Arm/devel/lib/pkgconfig/gazebo_grasp_plugin.pc

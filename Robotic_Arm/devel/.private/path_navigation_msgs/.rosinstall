@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ronit/Workspaces/Robotic_Arm/devel/.private/path_navigation_msgs/setup.sh

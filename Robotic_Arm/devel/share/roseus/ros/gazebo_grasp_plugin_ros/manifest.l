@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/gazebo_grasp_plugin_ros/share/roseus/ros/gazebo_grasp_plugin_ros/manifest.l

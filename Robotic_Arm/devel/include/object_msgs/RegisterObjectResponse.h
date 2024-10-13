@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/object_msgs/include/object_msgs/RegisterObjectResponse.h

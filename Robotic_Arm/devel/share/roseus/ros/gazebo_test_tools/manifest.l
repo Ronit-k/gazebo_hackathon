@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/gazebo_test_tools/share/roseus/ros/gazebo_test_tools/manifest.l

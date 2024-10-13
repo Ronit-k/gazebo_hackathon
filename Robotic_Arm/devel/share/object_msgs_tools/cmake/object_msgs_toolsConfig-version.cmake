@@ -1,0 +1,1 @@
+/home/ronit/Workspaces/Robotic_Arm/devel/.private/object_msgs_tools/share/object_msgs_tools/cmake/object_msgs_toolsConfig-version.cmake

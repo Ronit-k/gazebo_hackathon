@@ -1,0 +1,6 @@
+devel_space: /home/ronit/Workspaces/Robotic_Arm/devel
+install: false
+install_space: /home/ronit/Workspaces/Robotic_Arm/install
+profile: default
+source_space: /home/ronit/Workspaces/Robotic_Arm/src
+workspace: /home/ronit/Workspaces/Robotic_Arm
